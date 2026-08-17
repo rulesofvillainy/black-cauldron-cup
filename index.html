@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Black Cauldron Cup | October 9-11, 2026</title>
+  <meta name="description"
+    content="Black Cauldron Cup - a placeholder/demo fan tournament site clone. All content is fictional." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <nav class="nav-bar">
+      <a href="index.html" class="brand">
+        <img src="img/bcc_logo_small.png" alt="Black Cauldron Cup logo" class="brand-logo" />
+        The Black Cauldron Cup
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a href="#tournaments">Tournaments</a>
+        <a href="#team">Production Team</a>
+        <a href="#venue">Venue</a>
+        <a href="#contact">Contact</a>
+        <a href="faq.html">FAQ</a>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="img/bcc_logo_full.png" alt="Black Cauldron Cup" class="hero-logo" />
+      <div class="hero-eyebrow">Rules of Villainy X Impact Gaming Center <br> Present
+      </div>
+      <h1>The Black Cauldron Cup</h1>
+
+      <p class="tagline">
+        A three-day Unofficial Disney Lorcana tournament event featuring $6,000+ in cash and prizing. The biggest Disney
+        Lorcana
+        event in the Midwest!
+      </p>
+      <p class="meta">October 9-11, 2026 · Fairview Heights, Illinois</p>
+      <!-- Do we want to say St Louis Metro Area? or something?-->
+    </div>
+  </section>
+
+  <!-- ===================== TOURNAMENTS ===================== -->
+  <section id="tournaments" class="section">
+    <div class="container">
+      <h2 class="section-heading">Tournaments</h2>
+
+      <div class="notice">
+        Note: Win-A-Box events will award the latest Lorcana set while supplies last.
+      </div>
+
+      <div class="grid grid-3" style="margin-bottom: 32px;">
+
+        <!-- ── Card 1: Main Event ── -->
+        <div class="card event-card">
+          <div class="event-time">Saturday · October 10th, 2026 · 9:00 AM CST</div>
+          <h3>Main Event</h3>
+          <div class="prize">Prize Pool: $5,000 (Paid out to Top 16)</div>
+          <p>Core Constructed — Swiss rounds on Saturday followed by a top cut on Sunday at 9am CST.</p>
+          <div class="event-card-actions">
+            <button class="btn btn-primary" data-dummy-action="Buy Main Event Ticket">Get Tickets</button>
+            <button class="btn btn-outline btn-details" data-popover="popover-main">Details</button>
+          </div>
+        </div>
+
+        <!-- ── Card 2: Run Back Tournament ── -->
+        <div class="card event-card">
+          <div class="event-time">Sunday · October 11, 2026 · 10:00 AM CST</div>
+          <h3>Sunday Run Back Tournament</h3>
+          <div class="prize">Prize Pool: $1,000 (Paid out to Top 8)</div>
+          <p>Core Constructed — Swiss rounds followed by a top cut.</p>
+          <div class="event-card-actions">
+            <button class="btn btn-primary" data-dummy-action="Buy Run Back Ticket">Get Tickets</button>
+            <button class="btn btn-outline btn-details" data-popover="popover-runback">Details</button>
+          </div>
+        </div>
+
+        <!-- ── Card 3: Warm-Up Challenge ── -->
+        <div class="card event-card">
+          <div class="event-time">Friday · October 9th, 2026 · 6:00 PM CST</div>
+          <h3>Friday Warm-Up Tournament</h3>
+          <div class="prize">Prizing: Win-A-Box (All 4-0 Win a Box)</div>
+          <p>Core Constructed - 4 Swiss rounds. No top cut. All 4-0 players win a box! </p>
+          <div class="event-card-actions">
+            <button class="btn btn-primary" data-dummy-action="Buy Side Challenge Ticket">Get Tickets</button>
+            <button class="btn btn-outline btn-details" data-popover="popover-side">Details</button>
+          </div>
+        </div>
+
+        <!-- ── Card 4: Cosplay Contest ── -->
+        <div class="card event-card">
+          <div class="event-time">Saturday · October 10th, 2026 · 6:00 PM CST</div>
+          <h3>Cosplay Contest</h3>
+          <div class="prize">Free to Enter · Audience Judged</div>
+          <p>Show off your best Disney Lorcana–inspired cosplay! Open to all attendees.</p>
+          <div class="event-card-actions">
+            <button class="btn btn-outline btn-details" data-popover="popover-cosplay">Details</button>
+          </div>
+        </div>
+
+        <!-- ── On Demand Events card (spans 2 columns) ── -->
+        <div class="card ode-card">
+          <div class="ode-header">
+            <h3>On Demand Side Events</h3>
+            <p class="ode-subtitle">All weekend long · Win-A-Box</p>
+          </div>
+
+          <div class="ode-event-list">
+            <!-- 
+            <div class="ode-event-row">
+              <div class="ode-event-info">
+                <span class="ode-event-name">8 Player Win-A-Box</span>
+              </div>
+              <span class="ode-event-price">$20</span>
+            </div> -->
+
+            <div class="ode-event-row">
+              <div class="ode-event-info">
+                <span class="ode-event-name">On Demand Core Constructed</span>
+                <span class="ode-event-detail">8 Players – 3 Round Single Elimination - Winner gets a box</span>
+              </div>
+              <span class="ode-event-price">$40</span>
+            </div>
+            <!-- 
+            <div class="ode-event-row">
+              <div class="ode-event-info">
+                <span class="ode-event-name">Pack Rush</span>
+              </div>
+              <span class="ode-event-price">$20</span>
+            </div>
+
+            <div class="ode-event-row">
+              <div class="ode-event-info">
+                <span class="ode-event-name">Core Constructed</span>
+                <span class="ode-event-detail">4 Players – Round Robin &nbsp;&bull;&nbsp; 8 Players – 3 Round Single Elim</span>
+              </div>
+              <span class="ode-event-price">$20</span>
+            </div> -->
+
+          </div>
+
+          <p class="ode-footer">Prizing: Prize Wall Tickets — amounts to be announced</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== EVENT DETAIL POPOVERS ===================== -->
+
+  <!-- Popover: Main Event -->
+  <div class="popover-overlay" id="popover-main" role="dialog" aria-modal="true" aria-label="Main Event Details">
+    <div class="popover-box">
+      <button class="popover-close" aria-label="Close">✕</button>
+      <h3>Main Event — Details</h3>
+      <dl class="popover-info"> <!-- consider order of these items-->
+        <dt>Format</dt>
+        <dd>Core Constructed</dd>
+        <dt># of Swiss Rounds</dt>
+        <dd>TBD (based on attendance)</dd>
+        <dt>Decklist Due</dt>
+        <dd>8:30 AM CST</dd>
+        <dt>Decklist Submission</dt>
+        <dd><a href="#" data-dummy-action="Decklist Link">Submission Link (TBD)</a></dd>
+        <dt>Player Meeting</dt>
+        <dd>8:45 AM CST</dd>
+        <dt>Round 1 Start</dt>
+        <dd>9:00 AM CST · Saturday, October 10</dd>
+        <div class="popover-section-divider"><span>Day 2</span></div>
+
+        <dt>Day 2</dt>
+        <dd>Top 16</dd>
+        <dt>Day 2 Player Meeting</dt>
+        <dd>9:45 AM CST · Sunday, October 11</dd>
+        <dt>Round 1 Start</dt>
+        <dd>10:00 AM CST · Sunday, October 11</dd>
+        <dt>Ravensburger Playhub</dt>
+        <dd><a href="#" data-dummy-action="Playhub Link">Playhub Link (TBD)</a></dd>
+      </dl>
+      <h4 class="popover-prize-heading">Prize Structure</h4>
+      <ul class="popover-prizes">
+        <li><strong>1st Place</strong>
+          <ul>
+            <li>$1,500</li>
+          </ul>
+        </li>
+        <li><strong>2nd Place</strong>
+          <ul>
+            <li>$1,000</li>
+          </ul>
+        </li>
+        <li><strong>3rd / 4th Place</strong>
+          <ul>
+            <li>$450</li>
+          </ul>
+        </li>
+        <li><strong>5th – 8th Place</strong>
+          <ul>
+            <li>$200</li>
+          </ul>
+        </li>
+        <li><strong>9th – 16th Place</strong>
+          <ul>
+            <li>$100</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popover: Run Back Tournament -->
+  <div class="popover-overlay" id="popover-runback" role="dialog" aria-modal="true"
+    aria-label="Run Back Tournament Details">
+    <div class="popover-box">
+      <button class="popover-close" aria-label="Close">✕</button>
+      <h3>Run Back Tournament — Details</h3>
+      <dl class="popover-info">
+        <dt>Format</dt>
+        <dd>Core Constructed</dd>
+        <dt>Rounds</dt>
+        <dd>Swiss (TBD based on attendance)</dd>
+        <dt>Decklist Due</dt>
+        <dd>TBD</dd>
+        <dt>Decklist Submission</dt>
+        <dd><a href="#" data-dummy-action="Decklist Link">Submission Link (TBD)</a></dd>
+        <dt>Player Meeting</dt>
+        <dd>8:45 AM CST</dd>
+        <dt>Round 1 Start</dt>
+        <dd>9:00 AM CST · Sunday, October 11</dd>
+        <dt>Top Cut</dt>
+        <dd>Top 8</dd>
+        <dt>Top Cut Start</dt>
+        <dd>Following Swiss rounds</dd>
+        <dt>Ravensburger Playhub</dt>
+        <dd><a href="#" data-dummy-action="Playhub Link">Playhub Link (TBD)</a></dd>
+      </dl>
+      <h4 class="popover-prize-heading">Prize Structure</h4>
+      <ul class="popover-prizes">
+        <li><strong>1st Place</strong>
+          <ul>
+            <li>$300</li>
+          </ul>
+        </li>
+        <li><strong>2nd Place</strong>
+          <ul>
+            <li>$200</li>
+          </ul>
+        </li>
+        <li><strong>3rd / 4th Place</strong>
+          <ul>
+            <li>$100</li>
+          </ul>
+        </li>
+        <li><strong>5th – 8th Place</strong>
+          <ul>
+            <li>$75</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popover: Warm-up Challenge -->
+  <div class="popover-overlay" id="popover-side" role="dialog" aria-modal="true" aria-label="Side Challenge Details">
+    <div class="popover-box">
+      <button class="popover-close" aria-label="Close">✕</button>
+      <h3>Side Challenge — Details</h3>
+      <dl class="popover-info">
+        <dt>Format</dt>
+        <dd>Core Constructed</dd>
+        <dt>Rounds</dt>
+        <dd>Swiss (TBD based on attendance)</dd>
+        <dt>Decklist Due</dt>
+        <dd>TBD</dd>
+        <dt>Decklist Submission</dt>
+        <dd><a href="#" data-dummy-action="Decklist Link">Submission Link (TBD)</a></dd>
+        <dt>Player Meeting</dt>
+        <dd>11:45 AM CST</dd>
+        <dt>Round 1 Start</dt>
+        <dd>12:00 PM CST · Saturday, October 10</dd>
+        <dt>Top Cut</dt>
+        <dd>Top 8</dd>
+        <dt>Top Cut Start</dt>
+        <dd>Following Swiss rounds</dd>
+        <dt>Ravensburger Playhub</dt>
+        <dd><a href="#" data-dummy-action="Playhub Link">Playhub Link (TBD)</a></dd>
+      </dl>
+      <h4 class="popover-prize-heading">Prize Structure</h4>
+      <ul class="popover-prizes">
+        <li><strong>1st Place</strong>
+          <ul>
+            <li>TBD</li>
+          </ul>
+        </li>
+        <li><strong>2nd Place</strong>
+          <ul>
+            <li>TBD</li>
+          </ul>
+        </li>
+        <li><strong>3rd / 4th Place</strong>
+          <ul>
+            <li>TBD</li>
+          </ul>
+        </li>
+        <li><strong>5th – 8th Place</strong>
+          <ul>
+            <li>TBD</li>
+          </ul>
+        </li>
+        <li><strong>9th – 16th Place</strong>
+          <ul>
+            <li>TBD</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popover: Cosplay Contest -->
+  <div class="popover-overlay" id="popover-cosplay" role="dialog" aria-modal="true"
+    aria-label="Cosplay Contest Details">
+    <div class="popover-box">
+      <button class="popover-close" aria-label="Close">✕</button>
+      <h3>Cosplay Contest — Details</h3>
+      <dl class="popover-info">
+        <dt>Start Time</dt>
+        <dd>6:00 PM CST · Saturday, October 10</dd>
+        <dt>Cost</dt>
+        <dd>Free</dd>
+        <dt>Judging</dt>
+        <dd>Audience Vote</dd>
+      </dl>
+      <h4 class="popover-prize-heading">Prize Structure</h4>
+      <ul class="popover-prizes">
+        <li><strong>1st Place</strong>
+          <ul>
+            <li>TBD</li>
+          </ul>
+        </li>
+        <li><strong>2nd Place</strong>
+          <ul>
+            <li>TBD</li>
+          </ul>
+        </li>
+        <li><strong>Participation</strong>
+          <ul>
+            <li>TBD</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- ===================== COMMENTATORS / TEAM ===================== -->
+  <section id="team" class="section section-alt">
+    <div class="container">
+      <h2 class="section-heading">Meet the Stream Team</h2>
+      <p class="section-subheading">Top tier talent bringing you the highest of quality production, commentary, and
+        analysis.</p>
+      <div class="grid grid-5">
+        <div class="person-card">
+          <img src="img/caster_andy.jpg" class="placeholder-img avatar-img"></img>
+          <h4>[RoV] Andy</h4>
+          <div class="role">Production / Commentary</div>
+        </div>
+        <div class="person-card">
+          <img src="img/caster_vince.png" class="placeholder-img avatar-img"></img>
+          <h4>Villain Vince</h4>
+          <div class="role">Commentary</div>
+        </div>
+        <div class="person-card">
+          <img src="img/caster_kirsten.webp" class="placeholder-img avatar-img"></img>
+          <h4>[RoV] Kirsten</h4>
+          <div class="role">Player Interviews</div>
+        </div>
+        <div class="person-card">
+          <span class="placeholder-img avatar-img">TBD</span>
+          <h4>TBD</h4>
+          <div class="role">Remote Commentary</div>
+        </div>
+        <div class="person-card">
+          <span class="placeholder-img avatar-img">TBD</span>
+          <h4>TBD</h4>
+          <div class="role">Remote Commentary</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SPONSORS ===================== -->
+  <!-- <section class="section">
+    <div class="container">
+      <h2 class="section-heading">Community Sponsors &amp; Partners</h2>
+      <p class="section-subheading">Placeholder sponsor logos and names — replace with real partners.</p>
+      <div class="grid grid-4">
+        <a href="#" class="sponsor-card" data-dummy-action="Visit Sponsor One">
+          <span class="placeholder-img sponsor-img">LOGO</span>
+          <div class="sponsor-name">Sponsor One</div>
+        </a>
+        <a href="#" class="sponsor-card" data-dummy-action="Visit Sponsor Two">
+          <span class="placeholder-img sponsor-img">LOGO</span>
+          <div class="sponsor-name">Sponsor Two</div>
+        </a>
+        <a href="#" class="sponsor-card" data-dummy-action="Visit Sponsor Three">
+          <span class="placeholder-img sponsor-img">LOGO</span>
+          <div class="sponsor-name">Sponsor Three</div>
+        </a>
+        <a href="#" class="sponsor-card" data-dummy-action="Visit Sponsor Four">
+          <span class="placeholder-img sponsor-img">LOGO</span>
+          <div class="sponsor-name">Sponsor Four</div>
+        </a>
+      </div>
+    </div>
+  </section> -->
+
+
+  <!-- ===================== VENUE ===================== -->
+  <section id="venue" class="section">
+    <div class="container">
+      <h2 class="section-heading">Venue &amp; Accommodations</h2>
+      <div class="venue-details">
+        <div>
+          <h3>Event Venue</h3>
+          <p class="venue-address">
+            Placeholder Conference Center<br />
+            123 Placeholder Rd<br />
+            Cauldron Hollow, CA 90000
+          </p>
+          <p>Placeholder description of the venue location and nearby amenities.</p>
+          <span class="placeholder-img hero-img" style="aspect-ratio: 4/3;">VENUE MAP / PHOTO PLACEHOLDER</span>
+        </div>
+        <div class="hotel-block">
+          <h3>Hotel Block (Placeholder)</h3>
+          <dl>
+            <dt>Arrival</dt>
+            <dd>06/11/2026</dd>
+            <dt>Check Out</dt>
+            <dd>06/14/2026</dd>
+            <dt>Book By</dt>
+            <dd>05/11/2026</dd>
+            <dt>Check-In</dt>
+            <dd>4:00 PM</dd>
+            <dt>Parking</dt>
+            <dd>$0 placeholder fee per night</dd>
+            <dt>Group Code</dt>
+            <dd>PLACEHOLDER</dd>
+          </dl>
+          <p style="margin-top:14px; font-size:0.85rem; color:var(--color-text-muted);">
+            Placeholder shuttle and reservation instructions would go here.
+          </p>
+          <button class="btn btn-outline btn-sm" data-dummy-action="View Hotel Booking Link">
+            Book Hotel Block
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT / WHO WE ARE ===================== -->
+  <section class="section section-alt">
+    <div class="container" style="max-width: 760px; text-align:center;">
+      <h2 class="section-heading">Meet the Organizers</h2>
+      <p>
+        Rules of Villainy is a community focused unofficial Disney Lorcana organization that focuses on bringing
+        entertaining tournaments to the St Louis area,
+        and producing high quality recorded and live content. This event is made possible by our partnership with Impact
+        Gaming Center in Fairview Heights, Illinois.
+        Our goal is to share our love of the Disney Lorcana Trading Card Game with as many people as possible.
+      </p>
+      <!-- <div style="display:flex; gap:14px; justify-content:center; margin-top:20px; flex-wrap:wrap;">
+        <button class="btn btn-outline" data-dummy-action="Open Volunteer Form">Volunteer</button>
+        <button class="btn btn-outline" data-dummy-action="Open Staff Application">Staff Application</button>
+      </div> -->
+      <p style="margin-top:16px; font-size:0.85rem; color:var(--color-text-muted);">
+        Placeholder note: fine print text goes here if needed.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="section">
+    <div class="container contact-box">
+      <h2 class="section-heading">Contact Us</h2>
+      <p>
+        Please do not hesitate to reach out with questions, sponsorship
+        interest, or for general support.
+      </p>
+      <p><a href="mailto:RulesOfVillainy@gmail.com" class="contact-email">RulesOfVillainy@gmail.com</a></p>
+      <!-- <button class="btn btn-accent" data-dummy-action="Donate">Donate (Placeholder)</button> -->
+      <div class="social-links">
+        <a href="https://discord.gg/C2XREFRHuE" data-dummy-action="Open Discord">Discord</a>
+        <a href="https://villainy.ink" data-dummy-action="Open Website">RoV Linktree</a>
+        <a href="https://www.facebook.com/rulesofvillainy" data-dummy-action="Open Facebook">Facebook</a>
+        <a href="https://www.instagram.com/rulesofvillainy/" data-dummy-action="Open Instagram">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      © 2026 Rules of Villainy. Disney Lorcana is property of Disney/Ravensburger. The Black Cauldron Cup is an
+      Unofficial Community run event.
+    </div>
+  </footer>
+
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

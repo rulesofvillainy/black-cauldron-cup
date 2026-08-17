@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Table Purchase — Black Cauldron Cup (Placeholder Demo)</title>
+  <meta name="description" content="Placeholder vendor table purchase page for the Black Cauldron Cup demo clone site." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-bar">
+      <a href="index.html" class="brand">
+        <span class="placeholder-img logo-img">LOGO</span>
+        Black Cauldron Cup
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html#tournaments">Tournaments</a>
+        <a href="index.html#vendors">Vendors</a>
+        <a href="index.html#venue">Venue</a>
+        <a href="index.html#team">Team</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="#" data-open-signin>Sign In</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-header container">
+    <h1>Vendor Table Purchase</h1>
+    <p class="section-subheading">Placeholder vendor checkout flow — nothing here is connected to real payments.</p>
+    <a href="#" class="btn btn-outline btn-sm" data-open-signin>Sign In</a>
+  </section>
+
+  <section class="section" style="padding-top: 20px;">
+    <div class="container" style="max-width: 820px;">
+
+      <p class="loading-msg" id="vendor-loading">Loading events…</p>
+
+      <div id="vendor-content" style="display:none;">
+        <p class="section-subheading">
+          Placeholder: select an event below, then choose a table option.
+          This demo simulates the loading state before revealing dummy options.
+        </p>
+
+        <div class="card" style="margin-bottom: 24px;">
+          <h3>Placeholder Event: Black Cauldron Cup 2026</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+            June 12–13, 2026 · Cauldron Hollow, CA (Placeholder Location)
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card vendor-option">
+            <h3>Option A</h3>
+            <div class="price">$50</div>
+            <ul>
+              <li>6ft table(s)</li>
+              <li>Placeholder inclusion detail</li>
+              <li>Non-refundable (placeholder policy)</li>
+            </ul>
+            <button class="btn btn-primary btn-block" data-dummy-action="Purchase Option A Table">
+              Purchase
+            </button>
+          </div>
+          <div class="card vendor-option">
+            <h3>Option B</h3>
+            <div class="price">$180</div>
+            <ul>
+              <li>8×8 booth with (3) 8ft tables</li>
+              <li>Power included (placeholder)</li>
+              <li>Non-refundable (placeholder policy)</li>
+            </ul>
+            <button class="btn btn-primary btn-block" data-dummy-action="Purchase Option B Table">
+              Purchase
+            </button>
+          </div>
+        </div>
+
+        <p style="text-align:center; margin-top: 28px; font-size: 0.85rem; color: var(--color-text-muted);">
+          Placeholder note: sign in required before a real purchase would be
+          processed. This demo has no backend, so no order is ever created.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2026 Black Cauldron Cup. A placeholder demo site — not a real event. All rights reserved.
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="signin-modal">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <h3>Sign In</h3>
+      <p class="modal-sub">Placeholder form — no real authentication happens here.</p>
+      <form>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" />
+        </div>
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+      </form>
+      <p class="demo-note">This is a static demo clone. No accounts are created or stored.</p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

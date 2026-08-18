@@ -889,9 +889,35 @@ img {
   margin-bottom: 2px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+
+  /* --- Tournament grid: one card per row on phones/small tablets --- */
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ODE card: reset the 2-col span so it fits in the single-column grid */
+  .ode-card {
+    grid-column: span 1 !important;
+  }
+
+  /* --- Popover: prevent horizontal scrolling, bottom-sheet style --- */
+  .popover-overlay {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
   .popover-box {
-    padding: 24px 20px;
+    padding: 24px 18px;
+    max-width: 100%;
+    width: 100%;
+    max-height: 85vh;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  /* Allow dt labels to wrap so long text doesn't cause overflow */
+  .popover-info dt {
+    white-space: normal;
   }
 
   .event-card-actions {
@@ -901,7 +927,8 @@ img {
 
 /* ---------- Popover section divider (Day 1 → Day 2) ---------- */
 .popover-section-divider {
-  grid-column: 1 / -1;          /* span both dt and dd columns */
+  grid-column: 1 / -1;
+  /* span both dt and dd columns */
   display: flex;
   align-items: center;
   gap: 10px;
@@ -914,11 +941,10 @@ img {
   flex: 1;
   height: 1px;
   background: linear-gradient(to right,
-    transparent,
-    var(--color-primary) 30%,
-    var(--color-primary) 70%,
-    transparent
-  );
+      transparent,
+      var(--color-primary) 30%,
+      var(--color-primary) 70%,
+      transparent);
   opacity: 0.45;
 }
 
@@ -936,14 +962,13 @@ img {
 /* ---------- On Demand Events card ---------- */
 .ode-card {
   /* Span 2 columns in the 3-col tournament grid */
-  grid-column: span 2;
+  grid-column: span 1;
 
   /* Override standard card border with a dashed teal border */
   border: 2px dashed rgba(46, 232, 200, 0.45) !important;
   background: linear-gradient(160deg,
-    rgba(46, 232, 200, 0.04) 0%,
-    var(--color-surface) 100%
-  ) !important;
+      rgba(46, 232, 200, 0.04) 0%,
+      var(--color-surface) 100%) !important;
   padding: 28px 32px;
 }
 

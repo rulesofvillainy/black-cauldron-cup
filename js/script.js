@@ -61,13 +61,29 @@ function closePopover(overlay) {
   document.body.style.overflow = "";
 }
 
-/* ---------- Any button/link tagged as a dummy action ---------- */
+/* ---------- Contextual messages for pending/TBD actions ---------- */
+const DUMMY_MESSAGES = {
+  "Decklist Link":
+    "Decklist submission link not yet available. Please check back later or contact the Tournament Organizers.",
+  "Playhub Link":
+    "Ravensburger Playhub link not yet available. Please check back closer to the event date.",
+  "View Hotel Booking Link":
+    "Hotel block booking details are not yet available. Check back soon for more information.",
+  "Purchase Option A Table":
+    "Vendor table applications are not yet open. Please check back later or contact the event organizers.",
+  "Purchase Option B Table":
+    "Vendor table applications are not yet open. Please check back later or contact the event organizers.",
+};
+
 function initDummyButtons() {
   document.querySelectorAll("[data-dummy-action]").forEach((el) => {
     el.addEventListener("click", (e) => {
       e.preventDefault();
-      const label = el.getAttribute("data-dummy-action") || "This action";
-      showToast(`${label} — demo only, no real purchase or link happens here.`);
+      const action = el.getAttribute("data-dummy-action") || "";
+      const message =
+        DUMMY_MESSAGES[action] ||
+        `${action} — this link is not yet available. Please check back later.`;
+      showToast(message);
     });
   });
 }

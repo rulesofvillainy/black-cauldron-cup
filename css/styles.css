@@ -544,15 +544,33 @@ img {
 }
 
 /* ---------- Venue ---------- */
-.venue-details {
+.venue-location {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: start;
+  margin-bottom: 32px;
 }
 
 @media (max-width: 760px) {
-  .venue-details {
+  .venue-location {
+    grid-template-columns: 1fr;
+  }
+}
+
+.venue-info h3 {
+  margin-top: 0;
+}
+
+.hotel-blocks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .hotel-blocks-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -562,11 +580,22 @@ img {
   margin-bottom: 20px;
 }
 
+.hotel-name {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
 .hotel-block {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 20px;
+}
+
+.hotel-block h3 {
+  margin-top: 0;
 }
 
 .hotel-block dl {

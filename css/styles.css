@@ -544,35 +544,30 @@ img {
 }
 
 /* ---------- Venue ---------- */
+
+/* Outer row: left = venue info+map, right = hotel card */
 .venue-location {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: start;
-  margin-bottom: 32px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 860px) {
   .venue-location {
     grid-template-columns: 1fr;
   }
 }
 
+/* Left column: stacks venue text above map */
+.venue-info-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .venue-info h3 {
   margin-top: 0;
-}
-
-.hotel-blocks-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: start;
-}
-
-@media (max-width: 760px) {
-  .hotel-blocks-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .venue-address {
@@ -613,6 +608,7 @@ img {
 .hotel-block dd {
   margin: 0;
 }
+
 
 /* ---------- Featured Artist ---------- */
 .artist-layout {
@@ -718,7 +714,8 @@ img {
 /* Two-pane body: viewer left, thumbnail grid right */
 .card-gallery {
   flex: 1;
-  min-height: 0; /* critical flex fix */
+  min-height: 0;
+  /* critical flex fix */
   display: grid;
   grid-template-columns: 1fr 260px;
   gap: 0;
@@ -737,6 +734,7 @@ img {
   .card-gallery {
     grid-template-columns: 1fr 340px;
   }
+
   .card-gallery__strip {
     grid-template-columns: repeat(3, 1fr) !important;
   }
@@ -750,10 +748,12 @@ img {
     height: 90vh;
     max-height: 90vh;
   }
+
   .card-gallery {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 130px;
   }
+
   .card-gallery__strip {
     grid-template-columns: repeat(6, 1fr) !important;
     overflow-x: auto !important;
@@ -765,7 +765,8 @@ img {
 
 /* LEFT: card viewer — transparent, no border, card fills it */
 .card-gallery__viewer {
-  flex: 1;           /* fills all left-column space above the footer */
+  flex: 1;
+  /* fills all left-column space above the footer */
   min-height: 0;
   display: flex;
   align-items: center;
@@ -807,12 +808,19 @@ img {
   scrollbar-color: rgba(46, 232, 200, 0.35) transparent;
 }
 
-.card-gallery__strip::-webkit-scrollbar { width: 4px; }
-.card-gallery__strip::-webkit-scrollbar-track { background: transparent; }
+.card-gallery__strip::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card-gallery__strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .card-gallery__strip::-webkit-scrollbar-thumb {
   background: rgba(46, 232, 200, 0.35);
   border-radius: 999px;
 }
+
 .card-gallery__strip::-webkit-scrollbar-thumb:hover {
   background: rgba(46, 232, 200, 0.65);
 }
@@ -843,14 +851,20 @@ img {
 .gallery-thumb img {
   width: 100%;
   aspect-ratio: 3 / 4;
-  object-fit: contain;   /* show whole card, no crop */
-  background: #0a0818;   /* dark fill behind card corners */
+  object-fit: contain;
+  /* show whole card, no crop */
+  background: #0a0818;
+  /* dark fill behind card corners */
   display: block;
 }
 
-.gallery-thumb:hover img { transform: none; }
+.gallery-thumb:hover img {
+  transform: none;
+}
 
-.gallery-thumb span { display: none; }
+.gallery-thumb span {
+  display: none;
+}
 
 /* BOTTOM: full-width card name footer */
 .card-gallery__footer {
@@ -1195,7 +1209,7 @@ img {
   /* --- Popover: prevent horizontal scrolling, bottom-sheet style --- */
   .popover-overlay {
     padding: 12px;
-    align-items: flex-end;
+    /*align-items: flex-end;*/
   }
 
   .popover-box {

@@ -29,6 +29,7 @@
         <a href="#tournaments">Tournaments</a>
         <a href="#team">Production Team</a>
         <a href="#venue">Venue</a>
+        <a href="#artist">Featured Artist</a>
         <a href="#contact">Contact</a>
         <a href="#faq">FAQ</a>
       </div>
@@ -372,15 +373,26 @@
           <h4>[RoV] Kirsten</h4>
           <div class="role">Player Interviews</div>
         </div>
+
+        <div class="person-card">
+          <img src="img/caster-brad.png" class="placeholder-img avatar-img">
+          <h4>The Mayor of Lorcana</h4>
+          <div class="role">Cauldron Master of Ceremonies</div>
+        </div>
         <div class="person-card">
           <img src="img/brando.jpg" class="placeholder-img avatar-img">
           <h4>Brando</h4>
           <div class="role">Remote Commentary</div>
         </div>
         <div class="person-card">
-          <img src="img/caster-brad.png" class="placeholder-img avatar-img">
-          <h4>The Mayor of Lorcana</h4>
-          <div class="role">Cauldron Master of Ceremonies</div>
+          <img src="img/caster-avery.png" class="placeholder-img avatar-img">
+          <h4>Avery Stouthearted</h4>
+          <div class="role">Remote Commentary</div>
+        </div>
+        <div class="person-card">
+          <img src="img/caster-Zero.png" class="placeholder-img avatar-img">
+          <h4>ZeroTheHero</h4>
+          <div class="role">Remote Commentary</div>
         </div>
       </div>
     </div>
@@ -479,6 +491,240 @@
       </div>
     </div>
   </section>
+
+  <!-- ===================== FEATURED ARTIST ===================== -->
+  <section id="artist" class="section section-alt">
+    <div class="container">
+      <h2 class="section-heading">Artist Signings</h2>
+      <p class="section-subheading"></p>
+
+      <div class="artist-layout">
+
+        <!-- Artist photo -->
+        <div class="artist-photo-wrap">
+          <img src="img/artist_image.png" alt="Featured Artist" class="artist-photo" />
+        </div>
+
+        <!-- Artist info -->
+        <div class="artist-info">
+          <div class="artist-eyebrow">Artist Spotlight</div>
+          <h3 class="artist-name">Cam Kendell</h3>
+          <p class="artist-bio">
+            An incredibly talented Disney Lorcana card artist whose stunning work has captivated fans around the
+            world. Joining us for the entire Black Cauldron Cup weekend, they will be available for signings,
+            commissioned art, and to chat about their creative process. Don&rsquo;t miss your chance to meet
+            the artist behind some of your favorite cards!
+          </p>
+          <div class="artist-actions">
+            <button class="btn btn-outline" data-popover="popover-artist-details">More Details</button>
+            <button class="btn btn-primary" data-popover="popover-artist-cards">View Their Cards</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Popover: Artist Details -->
+  <div class="popover-overlay" id="popover-artist-details" role="dialog" aria-modal="true" aria-label="Artist Details">
+    <div class="popover-box">
+      <button class="popover-close" aria-label="Close">&#x2715;</button>
+      <h3>Artist Details</h3>
+      <dl class="popover-info">
+        <dt>Availability</dt>
+        <dd>Saturday & Sunday</dd>
+        <dt>Saturday Hours</dt>
+        <dd>10am - 5pm</dd>
+        <dt>Saturday Hours</dt>
+        <dd>10am - 3pm</dd>
+        <dt>Personalized Signings</dt>
+        <dd>Price TBD</dd>
+        <dt>Non-Personalized Signings</dt>
+        <dd>Price TBD</dd>
+        <dt>Doodle/Sketch</dt>
+        <dd>Price TBD</dd>
+        <dt>Full Color Drawing</dt>
+        <dd>Price TBD</dd>
+        <dt>Artist Prints Available</dt>
+        <dd>TBD</dd>
+        <dt>Artist Print Pricing</dt>
+        <dd>TBD</dd>
+        <dt>Payment Methods Accepted</dt>
+        <dd>TBD</dd>
+        <dt>Instagram</dt>
+        <dd><a href="https://www.instagram.com/camkendell" target="_blank">https://www.instagram.com/camkendell</a></dd>
+        <dt>Website</dt>
+        <dd><a href="https://camkendell.com/" target="_blank">https://camkendell.com/</a></dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- Popover: Artist Card Gallery -->
+  <div class="popover-overlay" id="popover-artist-cards" role="dialog" aria-modal="true"
+    aria-label="Artist Card Gallery">
+    <div class="popover-box--gallery">
+      <button class="popover-close" aria-label="Close">&#x2715;</button>
+      <div class="card-gallery__header">Cam Kendell's Card Illustrations</div>
+      <div class="card-gallery">
+        <!-- Left column: viewer + card name -->
+        <div class="card-gallery__left">
+          <div class="card-gallery__viewer">
+            <img id="gallery-main-img" src="" alt="Selected card" class="card-gallery__main-img" />
+          </div>
+          <!-- Card name footer — only as wide as the viewer -->
+          <div class="card-gallery__footer" id="gallery-main-label">Hover or click a card to preview</div>
+        </div>
+
+        <!-- Scrollable thumbnail strip -->
+        <div class="card-gallery__strip" id="gallery-strip">
+
+          <div class="gallery-thumb active" data-img="img/artistCards/Baloo-VonBruinwaldXIII.webp"
+            data-label="Baloo — Von Bruinwald XIII">
+            <img src="img/artistCards/Baloo-VonBruinwaldXIII.webp" alt="Baloo — Von Bruinwald XIII" />
+            <span>Baloo</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Brooklyn-SecondInCommand.webp"
+            data-label="Brooklyn — Second in Command">
+            <img src="img/artistCards/Brooklyn-SecondInCommand.webp" alt="Brooklyn — Second in Command" />
+            <span>Brooklyn</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/CaptainHook-RuthlessPirate.webp"
+            data-label="Captain Hook — Ruthless Pirate">
+            <img src="img/artistCards/CaptainHook-RuthlessPirate.webp" alt="Captain Hook — Ruthless Pirate" />
+            <span>Captain Hook</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Chip-TeamPlayer.webp" data-label="Chip — Team Player">
+            <img src="img/artistCards/Chip-TeamPlayer.webp" alt="Chip — Team Player" />
+            <span>Chip</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Coldstone-ReincarnatedCyborg.webp"
+            data-label="Coldstone — Reincarnated Cyborg">
+            <img src="img/artistCards/Coldstone-ReincarnatedCyborg.webp" alt="Coldstone — Reincarnated Cyborg" />
+            <span>Coldstone</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Dale-ReadyForHisShot.webp"
+            data-label="Dale — Ready for His Shot">
+            <img src="img/artistCards/Dale-ReadyForHisShot.webp" alt="Dale — Ready for His Shot" />
+            <span>Dale</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/DarkwingDuck-CoolUnderPressure.webp"
+            data-label="Darkwing Duck — Cool Under Pressure">
+            <img src="img/artistCards/DarkwingDuck-CoolUnderPressure.webp" alt="Darkwing Duck — Cool Under Pressure" />
+            <span>Darkwing Duck</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/DrFacilier-RemarkableGentleman.webp"
+            data-label="Dr. Facilier — Remarkable Gentleman">
+            <img src="img/artistCards/DrFacilier-RemarkableGentleman.webp" alt="Dr. Facilier — Remarkable Gentleman" />
+            <span>Dr. Facilier</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Fred-MascotByDay.webp" data-label="Fred — Mascot by Day">
+            <img src="img/artistCards/Fred-MascotByDay.webp" alt="Fred — Mascot by Day" />
+            <span>Fred</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Gizmoduck-SuitedUp.webp"
+            data-label="Gizmoduck — Suited Up">
+            <img src="img/artistCards/Gizmoduck-SuitedUp.webp" alt="Gizmoduck — Suited Up" />
+            <span>Gizmoduck</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Goons-MaleficentsUnderlings.webp"
+            data-label="Goons — Maleficent's Underlings">
+            <img src="img/artistCards/Goons-MaleficentsUnderlings.webp" alt="Goons — Maleficent's Underlings" />
+            <span>Goons</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/GosalynMallard-TheQuiverwingQuack.webp"
+            data-label="Gosalyn Mallard — The Quiverwing Quack">
+            <img src="img/artistCards/GosalynMallard-TheQuiverwingQuack.webp"
+              alt="Gosalyn Mallard — The Quiverwing Quack" />
+            <span>Gosalyn Mallard</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Iago-ReappearingParrot.webp"
+            data-label="Iago — Reappearing Parrot">
+            <img src="img/artistCards/Iago-ReappearingParrot.webp" alt="Iago — Reappearing Parrot" />
+            <span>Iago</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Jafar-Dreadnought.webp" data-label="Jafar — Dreadnought">
+            <img src="img/artistCards/Jafar-Dreadnought.webp" alt="Jafar — Dreadnought" />
+            <span>Jafar (Dreadnought)</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Jafar-TyrannicalHypnotist.webp"
+            data-label="Jafar — Tyrannical Hypnotist">
+            <img src="img/artistCards/Jafar-TyrannicalHypnotist.webp" alt="Jafar — Tyrannical Hypnotist" />
+            <span>Jafar (Hypnotist)</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Kanga-HunnyBard.webp" data-label="Kanga — Hunny Bard">
+            <img src="img/artistCards/Kanga-HunnyBard.webp" alt="Kanga — Hunny Bard" />
+            <span>Kanga</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Merlin-CleverClairvoyant.webp"
+            data-label="Merlin — Clever Clairvoyant">
+            <img src="img/artistCards/Merlin-CleverClairvoyant.webp" alt="Merlin — Clever Clairvoyant" />
+            <span>Merlin</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/MickeyMouse-WaywardSorcerer.webp"
+            data-label="Mickey Mouse — Wayward Sorcerer">
+            <img src="img/artistCards/MickeyMouse-WaywardSorcerer.webp" alt="Mickey Mouse — Wayward Sorcerer" />
+            <span>Mickey Mouse</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Negaduck-PublicEnemyNumberOne.webp"
+            data-label="Negaduck — Public Enemy Number One">
+            <img src="img/artistCards/Negaduck-PublicEnemyNumberOne.webp" alt="Negaduck — Public Enemy Number One" />
+            <span>Negaduck</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/ScroogeMcDuck-AfficionadoOfAntiquities.webp"
+            data-label="Scrooge McDuck — Afficionado of Antiquities">
+            <img src="img/artistCards/ScroogeMcDuck-AfficionadoOfAntiquities.webp"
+              alt="Scrooge McDuck — Afficionado of Antiquities" />
+            <span>Scrooge McDuck</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/Vinnie-GreenPigeon.webp"
+            data-label="Vinnie — Green Pigeon">
+            <img src="img/artistCards/Vinnie-GreenPigeon.webp" alt="Vinnie — Green Pigeon" />
+            <span>Vinnie</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/WinnieThePooh-HunnyArcmage.webp"
+            data-label="Winnie the Pooh — Hunny Arcmage">
+            <img src="img/artistCards/WinnieThePooh-HunnyArcmage.webp" alt="Winnie the Pooh — Hunny Arcmage" />
+            <span>Winnie the Pooh</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/WinnieThePooh-HunnyArcmage2.webp"
+            data-label="Winnie the Pooh — Hunny Arcmage (Alt)">
+            <img src="img/artistCards/WinnieThePooh-HunnyArcmage2.webp" alt="Winnie the Pooh — Hunny Arcmage (Alt)" />
+            <span>Winnie the Pooh (Alt)</span>
+          </div>
+
+          <div class="gallery-thumb" data-img="img/artistCards/WithAFewGoodFriends.webp"
+            data-label="With a Few Good Friends">
+            <img src="img/artistCards/WithAFewGoodFriends.webp" alt="With a Few Good Friends" />
+            <span>With a Few Good Friends</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <!-- ===================== ABOUT / WHO WE ARE ===================== -->
   <section class="section section-alt">

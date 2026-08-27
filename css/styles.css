@@ -614,6 +614,268 @@ img {
   margin: 0;
 }
 
+/* ---------- Featured Artist ---------- */
+.artist-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+@media (max-width: 860px) {
+  .artist-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.artist-photo-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--color-border), 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(107, 63, 160, 0.25);
+}
+
+.artist-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-lg);
+  transition: transform 0.4s ease;
+}
+
+.artist-photo-wrap:hover .artist-photo {
+  transform: scale(1.03);
+}
+
+.artist-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 10px;
+}
+
+.artist-name {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--color-text);
+  margin: 0 0 16px;
+}
+
+.artist-bio {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin: 0 0 28px;
+  max-width: 580px;
+}
+
+.artist-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Card Gallery Popover ---------- */
+
+/* Popover container: fixed size, flex column, clips overflow so ONLY strip scrolls */
+.popover-box--gallery {
+  width: 85vw;
+  max-width: 85vw;
+  height: 85vh;
+  max-height: 85vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: linear-gradient(160deg, var(--color-surface-alt) 0%, var(--color-surface) 100%);
+}
+
+/* Minimal header row with title + close button */
+.card-gallery__header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Reposition close button for the no-padding header */
+.popover-box--gallery .popover-close {
+  top: 12px;
+  right: 16px;
+}
+
+/* Two-pane body: viewer left, thumbnail grid right */
+.card-gallery {
+  flex: 1;
+  min-height: 0; /* critical flex fix */
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 0;
+}
+
+/* Left column: stacks viewer (fills space) and footer (fixed) */
+.card-gallery__left {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ≥1100px: wider thumbnail panel → 3 columns */
+@media (min-width: 1100px) {
+  .card-gallery {
+    grid-template-columns: 1fr 340px;
+  }
+  .card-gallery__strip {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Mobile: stack, thumbnails scroll horizontally */
+@media (max-width: 700px) {
+  .popover-box--gallery {
+    width: 96vw;
+    max-width: 96vw;
+    height: 90vh;
+    max-height: 90vh;
+  }
+  .card-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 130px;
+  }
+  .card-gallery__strip {
+    grid-template-columns: repeat(6, 1fr) !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    border-top: 1px solid var(--color-border) !important;
+    border-left: none !important;
+  }
+}
+
+/* LEFT: card viewer — transparent, no border, card fills it */
+.card-gallery__viewer {
+  flex: 1;           /* fills all left-column space above the footer */
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
+  padding: 20px 16px 16px 20px;
+}
+
+.card-gallery__main-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  /* opacity controlled by JS — no CSS transition here to avoid blink */
+  opacity: 0;
+  display: block;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.7);
+}
+
+.card-gallery__main-img.loaded {
+  opacity: 1;
+}
+
+/* RIGHT: scrollable thumbnail grid — only element that scrolls */
+.card-gallery__strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: start;
+  gap: 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+  padding: 12px 10px 12px 8px;
+  border-left: 1px solid var(--color-border);
+  background: rgba(8, 8, 16, 0.3);
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(46, 232, 200, 0.35) transparent;
+}
+
+.card-gallery__strip::-webkit-scrollbar { width: 4px; }
+.card-gallery__strip::-webkit-scrollbar-track { background: transparent; }
+.card-gallery__strip::-webkit-scrollbar-thumb {
+  background: rgba(46, 232, 200, 0.35);
+  border-radius: 999px;
+}
+.card-gallery__strip::-webkit-scrollbar-thumb:hover {
+  background: rgba(46, 232, 200, 0.65);
+}
+
+/* Individual thumbnail */
+.gallery-thumb {
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  background: var(--color-surface);
+}
+
+.gallery-thumb:hover {
+  border-color: rgba(46, 232, 200, 0.7);
+  box-shadow: 0 0 0 1px rgba(46, 232, 200, 0.35), 0 4px 16px rgba(0, 0, 0, 0.6);
+  transform: scale(1.03);
+  z-index: 2;
+  position: relative;
+}
+
+.gallery-thumb.active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px rgba(46, 232, 200, 0.45), 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-thumb img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;   /* show whole card, no crop */
+  background: #0a0818;   /* dark fill behind card corners */
+  display: block;
+}
+
+.gallery-thumb:hover img { transform: none; }
+
+.gallery-thumb span { display: none; }
+
+/* BOTTOM: full-width card name footer */
+.card-gallery__footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 10px 24px;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  background: rgba(8, 8, 16, 0.6);
+  border-top: 1px solid var(--color-border);
+  transition: color 0.22s ease, text-shadow 0.22s ease;
+}
+
+.card-gallery__footer.has-card {
+  color: var(--color-primary);
+  text-shadow: 0 0 24px rgba(46, 232, 200, 0.45);
+}
+
 /* ---------- Contact ---------- */
 .contact-box {
   text-align: center;
@@ -942,6 +1204,14 @@ img {
     width: 100%;
     max-height: 85vh;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  /* Gallery popover stays centered, not bottom-sheet */
+  .popover-box--gallery {
+    align-self: center;
+    border-radius: var(--radius-lg);
+    max-height: 90vh;
+    padding: 20px 14px 16px;
   }
 
   /* Allow dt labels to wrap so long text doesn't cause overflow */

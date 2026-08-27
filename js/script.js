@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initDummyButtons();
   initPopovers();
   initVendorPage();
+  initCardGallery();
 });
 
 /* ---------- Mobile nav toggle ---------- */
@@ -113,4 +114,72 @@ function initVendorPage() {
     loadingMsg.style.display = "none";
     vendorContent.style.display = "block";
   }, 900);
+}
+
+/* ---------- Artist Card Gallery ---------- */
+function initCardGallery() {
+  const overlay   = document.getElementById("popover-artist-cards");
+  const mainImg   = document.getElementById("gallery-main-img");
+  const mainLabel = document.getElementById("gallery-main-label");
+  const strip     = document.getElementById("gallery-strip");
+  if (!overlay || !mainImg || !mainLabel || !strip) return;
+
+  const thumbs = strip.querySelectorAll(".gallery-thumb");
+  let fadeTimer  = null;
+
+  /* Show a card in the viewer.
+   * lock=true  → definitive selection (click): single smooth fade-in.
+   * lock=false → hover preview: instant swap, no opacity cycle. */
+  function setGalleryCard(thumb, lock) {
+    const src   = thumb.dataset.img   || "";
+    const label = thumb.dataset.label || "";
+
+    // Update footer label
+    mainLabel.textContent = label;
+    mainLabel.classList.toggle("has-card", !!label);
+
+    if (lock) {
+      // Mark active thumb
+      thumbs.forEach(t => t.classList.remove("active"));
+      thumb.classList.add("active");
+
+      // Only fade if the src is actually changing
+      if (mainImg.src !== src && mainImg.getAttribute("src") !== src) {
+        clearTimeout(fadeTimer);
+        mainImg.style.transition = "opacity 0.28s ease";
+        mainImg.style.opacity    = "0";
+        fadeTimer = setTimeout(() => {
+          mainImg.src = src;
+          const show = () => { mainImg.style.opacity = "1"; };
+          mainImg.onload = show;
+          if (mainImg.complete && mainImg.naturalWidth) show();
+        }, 180);
+      }
+    } else {
+      // Hover: instant, no flash
+      clearTimeout(fadeTimer);
+      mainImg.style.transition = "none";
+      mainImg.style.opacity    = "1";
+      mainImg.src = src;
+    }
+  }
+
+  thumbs.forEach(thumb => {
+    thumb.addEventListener("mouseover", () => setGalleryCard(thumb, false));
+    thumb.addEventListener("click",     () => setGalleryCard(thumb, true));
+  });
+
+  // When cursor leaves the strip, snap back to the locked active card instantly
+  strip.addEventListener("mouseleave", () => {
+    const locked = strip.querySelector(".gallery-thumb.active");
+    if (locked) setGalleryCard(locked, false);
+  });
+
+  // When the gallery popover opens, load the active (or first) card instantly
+  document.querySelectorAll("[data-popover='popover-artist-cards']").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const active = strip.querySelector(".gallery-thumb.active") || thumbs[0];
+      if (active) setGalleryCard(active, false); // instant on open
+    });
+  });
 }
